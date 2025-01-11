@@ -1,0 +1,33 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "jekyll",
+            "type": "shell",
+            "command": "jekyll serve --livereload",
+            "problemMatcher": [],
+            "presentation": {
+                "group": "dev"
+            }
+        },
+        {
+            "label": "ts",
+            "type": "shell",
+            "command": "pnpm dev",
+            "options": {
+                "cwd": "${workspaceFolder}/_ts/"
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "group": "dev"
+            }
+        },
+        {
+            "label": "dev",
+            "dependsOn": ["jekyll", "ts"],
+            "problemMatcher": []
+        }
+    ]
+}

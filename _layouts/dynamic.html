@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <title>{{ page.title }}</title>
+    </head>
+
+    <body>
+        <noscript>
+            <a href="{{ "/static.html" | relative_url }}">Static site</a>
+        </noscript>
+
+        <script type="module" src={{ "/assets/js/index.js" | relative_url }}></script>
+    </body>
+</html>
